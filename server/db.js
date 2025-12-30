@@ -1,41 +1,45 @@
+// server/db.js
+import dotenv from 'dotenv';
+dotenv.config(); // 👈 MUST be first
+
 import pkg from 'pg';
 const { Pool } = pkg;
 
-const connectionString = process.env.DATABASE_URL || null;
+// Prefer DATABASE_URL, fallback to individual vars
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : 5432,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  ssl: false // local dev
+});
 
-let pool = null;
+pool.on('connect', () => {
+  console.log('✅ PostgreSQL connected');
+});
 
-if (connectionString || process.env.PGHOST) {
-  pool = new Pool({
-    connectionString: connectionString || undefined,
-    host: process.env.PGHOST,
-    port: process.env.PGPORT ? parseInt(process.env.PGPORT) : undefined,
-    user: process.env.PGUSER,
-    password: process.env.PGPASSWORD,
-    database: process.env.PGDATABASE
-  });
-
-  pool.on('error', (err) => {
-    console.error('Unexpected error on idle client', err);
-  });
-} else {
-  console.warn('No Postgres configuration found. Database features will use in-memory fallbacks.');
-}
+pool.on('error', (err) => {
+  console.error('❌ Unexpected PG error:', err);
+});
 
 export async function query(text, params) {
-  if (!pool) throw new Error('Database not configured');
   return pool.query(text, params);
 }
 
 export async function testConnection() {
-  if (!pool) return false;
   try {
     await pool.query('SELECT 1');
     return true;
   } catch (err) {
-    console.error('Postgres connection test failed:', err.message || err);
+    console.error('Postgres connection test failed:', err.message);
     return false;
   }
 }
 
-export default { pool, query, testConnection };
+export default {
+  pool,
+  query,
+  testConnection
+};

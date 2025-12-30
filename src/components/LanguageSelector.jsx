@@ -1,5 +1,4 @@
-// src/components/LanguageSelector.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Languages } from 'lucide-react';
 import {
@@ -11,15 +10,21 @@ import {
 import { languages } from '../lib/translations';
 
 export function LanguageSelector({ 
-  currentLanguage, 
+  currentLanguage = 'en', 
   onLanguageChange,
   variant = 'ghost',
   size = 'default'
 }) {
   const currentLang = languages.find(l => l.code === currentLanguage);
+  const [open, setOpen] = useState(false); // control dropdown open state
+
+  const handleChange = (langCode) => {
+    if (onLanguageChange) onLanguageChange(langCode);
+    setOpen(false); // close dropdown immediately
+  };
 
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
         <Button variant={variant} size={size} className="gap-2">
           <Languages className="h-4 w-4" />
@@ -27,15 +32,23 @@ export function LanguageSelector({
           <span className="sm:hidden">{currentLang?.flag}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
+
+      <DropdownMenuContent
+        align="end"
+        className="w-48 max-h-60 overflow-y-auto"
+      >
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-            onClick={() => onLanguageChange(lang.code)}
-            className={currentLanguage === lang.code ? 'bg-accent' : ''}
+            onSelect={() => handleChange(lang.code)}
+            className={`flex items-center gap-2 ${
+              currentLanguage === lang.code
+                ? 'bg-blue-600 text-white font-semibold'
+                : ''
+            }`}
           >
-            <span className="mr-2">{lang.flag}</span>
-            {lang.name}
+            <span>{lang.flag}</span>
+            <span>{lang.name}</span>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

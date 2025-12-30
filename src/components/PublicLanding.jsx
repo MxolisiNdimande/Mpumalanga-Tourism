@@ -18,7 +18,7 @@ export function PublicLanding({ onStaffLogin, onExplore }) {
   const [flightsData, setFlightsData] = useState([]);
   const [accommodationsData, setAccommodationsData] = useState([]);
 
-  // Fetch flights on mount with fallback
+  // Fetch flights
   useEffect(() => {
     const fetchFlights = async () => {
       try {
@@ -38,7 +38,7 @@ export function PublicLanding({ onStaffLogin, onExplore }) {
     fetchFlights();
   }, []);
 
-  // Fetch accommodations on mount with fallback
+  // Fetch accommodations
   useEffect(() => {
     const fetchAccommodations = async () => {
       try {
@@ -57,11 +57,6 @@ export function PublicLanding({ onStaffLogin, onExplore }) {
     };
     fetchAccommodations();
   }, []);
-
-  const handleTapToExplore = () => {
-    setShowAccommodations(true);
-    setShowTapPrompt(false);
-  };
 
   const ensureSession = () => {
     try {
@@ -92,6 +87,14 @@ export function PublicLanding({ onStaffLogin, onExplore }) {
     }).catch(() => {});
   };
 
+  const handleTapToExplore = () => {
+    // Trigger the Interactive Kiosk via App.jsx
+    if (onExplore) {
+      onExplore('interactive-kiosk');
+    }
+    setShowTapPrompt(false);
+  };
+
   const handleBackToSignage = () => {
     setShowKiosk(false);
     setKioskInitialView(null);
@@ -113,26 +116,8 @@ export function PublicLanding({ onStaffLogin, onExplore }) {
             <DigitalSignage
               onExplore={onExplore}
               onOpenKiosk={() => { setShowKiosk(true); setShowTapPrompt(false); if (onExplore) onExplore('interactive-kiosk'); }}
+              onOpenFlights={handleViewFlights}
             />
-
-            {/* Scheduled Flights Panel */}
-            <div
-              onClick={handleViewFlights} // Click panel to open modal
-              className="absolute top-16 right-4 z-30 w-72 cursor-pointer bg-white/90 backdrop-blur-md rounded-lg shadow-lg p-4 hover:scale-105 transition-transform"
-            >
-              <h3 className="font-bold text-sm mb-2">Scheduled Flights</h3>
-              <ul className="text-xs max-h-48 overflow-y-auto">
-                {flightsData.length > 0 ? (
-                  flightsData.map((flight) => (
-                    <li key={flight.id} className="border-b border-gray-200 py-1">
-                      {flight.airline} {flight.flightNumber} - {flight.status}
-                    </li>
-                  ))
-                ) : (
-                  <li>No flights scheduled</li>
-                )}
-              </ul>
-            </div>
 
             {/* Tap to Explore Prompt */}
             <AnimatePresence>
@@ -162,6 +147,25 @@ export function PublicLanding({ onStaffLogin, onExplore }) {
                 </motion.div>
               )}
             </AnimatePresence>
+
+            {/* Scheduled Flights Panel */}
+            <div
+              onClick={handleViewFlights}
+              className="absolute top-16 right-4 z-30 w-72 cursor-pointer bg-white/90 backdrop-blur-md rounded-lg shadow-lg p-4 hover:scale-105 transition-transform"
+            >
+              <h3 className="font-bold text-sm mb-2">Scheduled Flights</h3>
+              <ul className="text-xs max-h-48 overflow-y-auto">
+                {flightsData.length > 0 ? (
+                  flightsData.map((flight) => (
+                    <li key={flight.id} className="border-b border-gray-200 py-1">
+                      {flight.airline} {flight.flightNumber} - {flight.status}
+                    </li>
+                  ))
+                ) : (
+                  <li>No flights scheduled</li>
+                )}
+              </ul>
+            </div>
 
             {/* Accommodations Panel */}
             {showAccommodations && (

@@ -299,3 +299,38 @@ export const users = [
     status: "inactive"
   }
 ];
+
+export const accommodations = [
+  {
+    id: "acc1",
+    name: "Singita Lebombo Lodge",
+    type: "lodge",
+    location: "Kruger National Park",
+    description: "Luxury lodge perched on the cliffs overlooking the N'wanetsi River with stunning views and exclusive safari experiences.",
+    imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+    rating: 4.9,
+    pricePerNight: "R12,500",
+    amenities: ["Swimming Pool", "Spa", "Fine Dining", "Game Drives", "WiFi", "Air Conditioning"],
+    contact: {
+      phone: "+27 13 735 5500",
+      email: "reservations@singita.com",
+      website: "singita.com"
+    }
+  },
+  {
+    id: "acc2",
+    name: "Jock Safari Lodge",
+    type: "lodge",
+    location: "Kruger National Park",
+    description: "Historic safari lodge offering authentic African experiences with professional guides and luxurious accommodations.",
+    imageUrl: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800",
+    rating: 4.7,
+    pricePerNight: "R8,200",
+    amenities: ["Swimming Pool", "Restaurant", "Bar", "Game Drives", "Bush Walks", "Spa"],
+    contact: {
+      phone: "+27 13 781 9900",
+      email: "info@jocksafarilodge.com",
+      website: "jocksafarilodge.com"
+    }
+  }
+];
