@@ -11,6 +11,10 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Binoculars, Plus, Edit, Trash2, MapPin, Users, Eye, Activity, AlertCircle, CheckCircle, DoorOpen, RefreshCw } from 'lucide-react';
 import { toast } from 'sonner';
 import { useAnimalSightings } from '../hooks/useAnimalSightings';
+<<<<<<< HEAD
+=======
+import defaultAnimalImg from "../assets/images/lion.jpg";
+>>>>>>> 1b59ad4 (Initial commit)
 
 export function KrugerStaffPortal() {
   const { 
@@ -102,7 +106,11 @@ export function KrugerStaffPortal() {
         count: parseInt(count),
         confidence: parseInt(confidence),
         status,
+<<<<<<< HEAD
         image: 'https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=400'
+=======
+        image: defaultAnimalImg
+>>>>>>> 1b59ad4 (Initial commit)
       });
 
       toast.success(`New sighting of ${species} near ${gate} added successfully`);

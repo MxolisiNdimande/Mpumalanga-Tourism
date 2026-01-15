@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+// Local image imports
+import krugerImg from "../assets/images/kruger.jpg";
+import blydeImg from "../assets/images/blyde.jpg";
+import godsWindowImg from "../assets/images/gods-window.jpg";
+import sabieSandImg from "../assets/images/sabie-sand.jpg";
+
+>>>>>>> 1b59ad4 (Initial commit)
 export const accommodations = [
   {
     id: "acc1",
@@ -5,7 +14,11 @@ export const accommodations = [
     type: "lodge",
     location: "Kruger National Park",
     description: "Luxury lodge perched on the cliffs overlooking the N'wanetsi River with stunning views and exclusive safari experiences.",
+<<<<<<< HEAD
     imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
+=======
+    imageUrl: krugerImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.9,
     pricePerNight: "R12,500",
     amenities: ["Swimming Pool", "Spa", "Fine Dining", "Game Drives", "WiFi", "Air Conditioning"],
@@ -22,7 +35,11 @@ export const accommodations = [
     type: "lodge",
     location: "Kruger National Park",
     description: "Historic safari lodge offering authentic African experiences with professional guides and luxurious accommodations.",
+<<<<<<< HEAD
     imageUrl: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800",
+=======
+    imageUrl: sabieSandImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.7,
     pricePerNight: "R8,200",
     amenities: ["Swimming Pool", "Restaurant", "Bar", "Game Drives", "Bush Walks", "Spa"],
@@ -39,7 +56,11 @@ export const accommodations = [
     type: "resort",
     location: "Blyde River Canyon",
     description: "Family-friendly resort with stunning canyon views, comfortable accommodations, and various outdoor activities.",
+<<<<<<< HEAD
     imageUrl: "https://images.unsplash.com/photo-1586375300773-8384e3e4916f?w=800",
+=======
+    imageUrl: blydeImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.3,
     pricePerNight: "R1,800",
     amenities: ["Swimming Pool", "Restaurant", "Hiking Trails", "Canoeing", "WiFi", "Family Rooms"],
@@ -56,7 +77,11 @@ export const accommodations = [
     type: "camping",
     location: "Kruger National Park",
     description: "Popular rest camp offering various accommodation options from camping to comfortable bungalows in the heart of Kruger.",
+<<<<<<< HEAD
     imageUrl: "https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?w=800",
+=======
+    imageUrl: krugerImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.2,
     pricePerNight: "R950",
     amenities: ["Restaurant", "Shop", "Swimming Pool", "Filling Station", "Camping", "Bungalows"],
@@ -73,7 +98,11 @@ export const accommodations = [
     type: "hotel",
     location: "Graskop",
     description: "Comfortable hotel with panoramic views, perfect for exploring the Panorama Route and Blyde River Canyon.",
+<<<<<<< HEAD
     imageUrl: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800",
+=======
+    imageUrl: godsWindowImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.1,
     pricePerNight: "R1,200",
     amenities: ["Swimming Pool", "Spa", "Restaurant", "Bar", "WiFi", "Conference Facilities"],
@@ -90,7 +119,11 @@ export const accommodations = [
     type: "lodge",
     location: "Sabie Sand Game Reserve",
     description: "Award-winning luxury private game reserve offering exclusive safari experiences and world-class service.",
+<<<<<<< HEAD
     imageUrl: "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800",
+=======
+    imageUrl: sabieSandImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.9,
     pricePerNight: "R15,000",
     amenities: ["Private Pool", "Spa", "Gourmet Dining", "Game Drives", "Yoga", "Luxury Suites"],

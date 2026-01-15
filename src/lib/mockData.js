@@ -1,15 +1,56 @@
+<<<<<<< HEAD
+=======
+// =======================
+// IMAGE IMPORTS (LOCAL)
+// =======================
+
+// Destinations
+import krugerImg from "../assets/images/kruger.jpg";
+import blydeImg from "../assets/images/blyde.jpg";
+import godsWindowImg from "../assets/images/gods-window.jpg";
+import sabieSandImg from "../assets/images/sabie-sand.jpg";
+
+// Animal sightings
+import lionImg from "../assets/images/lion.jpg";
+import elephantImg from "../assets/images/elephant.jpg";
+import leopardImg from "../assets/images/leopard.jpg";
+import buffaloImg from "../assets/images/buffalo.jpg";
+import rhinoImg from "../assets/images/rhino.jpg";
+
+// =======================
+// DESTINATIONS
+// =======================
+
+>>>>>>> 1b59ad4 (Initial commit)
 export const destinations = [
   {
     id: "kruger",
     name: "Kruger National Park",
     country: "South Africa",
+<<<<<<< HEAD
     description: "One of Africa's largest game reserves with high density of wild animals including the Big 5. Experience incredible wildlife sightings, guided safaris, and authentic African bush experiences.",
     imageUrl: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800",
+=======
+    description:
+      "One of Africa's largest game reserves with high density of wild animals including the Big 5. Experience incredible wildlife sightings, guided safaris, and authentic African bush experiences.",
+    imageUrl: krugerImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.8,
     category: "Wildlife & Nature",
     avgCost: "R2,500 - R8,000",
     bestTime: "May - September",
+<<<<<<< HEAD
     activities: ["Game Drives", "Bird Watching", "Bush Walks", "Photography", "Camping", "Night Safaris"],
+=======
+    activities: [
+      "Game Drives",
+      "Bird Watching",
+      "Bush Walks",
+      "Photography",
+      "Camping",
+      "Night Safaris"
+    ],
+>>>>>>> 1b59ad4 (Initial commit)
     hasAnimalTracking: true,
     views: 15420,
     scans: 3245,
@@ -19,13 +60,30 @@ export const destinations = [
     id: "blyde",
     name: "Blyde River Canyon",
     country: "South Africa",
+<<<<<<< HEAD
     description: "A spectacular natural landmark with dramatic scenery, waterfalls, and panoramic views. The third largest canyon in the world offers breathtaking landscapes and outdoor adventures.",
     imageUrl: "https://images.unsplash.com/photo-1574784912348-5c1d915b0f6c?w=800",
+=======
+    description:
+      "A spectacular natural landmark with dramatic scenery, waterfalls, and panoramic views. The third largest canyon in the world offers breathtaking landscapes and outdoor adventures.",
+    imageUrl: blydeImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.7,
     category: "Nature & Scenery",
     avgCost: "R1,200 - R4,000",
     bestTime: "March - October",
+<<<<<<< HEAD
     activities: ["Hiking", "Boat Trips", "Photography", "Viewpoints", "Nature Walks", "Waterfall Visits"],
+=======
+    activities: [
+      "Hiking",
+      "Boat Trips",
+      "Photography",
+      "Viewpoints",
+      "Nature Walks",
+      "Waterfall Visits"
+    ],
+>>>>>>> 1b59ad4 (Initial commit)
     hasAnimalTracking: false,
     views: 8920,
     scans: 1876,
@@ -35,8 +93,14 @@ export const destinations = [
     id: "godswindow",
     name: "God's Window",
     country: "South Africa",
+<<<<<<< HEAD
     description: "A breathtaking viewpoint offering panoramic vistas of the Lowveld landscape. On clear days, you can see all the way to Mozambique from this spectacular cliff edge.",
     imageUrl: "https://images.unsplash.com/photo-1589553416267-f4c27ee2f8e0?w=800",
+=======
+    description:
+      "A breathtaking viewpoint offering panoramic vistas of the Lowveld landscape. On clear days, you can see all the way to Mozambique from this spectacular cliff edge.",
+    imageUrl: godsWindowImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.6,
     category: "Nature & Scenery",
     avgCost: "R800 - R2,500",
@@ -51,13 +115,29 @@ export const destinations = [
     id: "sabiesands",
     name: "Sabie Sand Game Reserve",
     country: "South Africa",
+<<<<<<< HEAD
     description: "Luxury private game reserve sharing unfenced borders with Kruger National Park. Exclusive safari experiences with premium accommodation and guided tours.",
     imageUrl: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800",
+=======
+    description:
+      "Luxury private game reserve sharing unfenced borders with Kruger National Park. Exclusive safari experiences with premium accommodation and guided tours.",
+    imageUrl: sabieSandImg,
+>>>>>>> 1b59ad4 (Initial commit)
     rating: 4.9,
     category: "Wildlife & Luxury",
     avgCost: "R5,000 - R15,000",
     bestTime: "May - October",
+<<<<<<< HEAD
     activities: ["Private Game Drives", "Luxury Lodging", "Spa Treatments", "Gourmet Dining", "Walking Safaris"],
+=======
+    activities: [
+      "Private Game Drives",
+      "Luxury Lodging",
+      "Spa Treatments",
+      "Gourmet Dining",
+      "Walking Safaris"
+    ],
+>>>>>>> 1b59ad4 (Initial commit)
     hasAnimalTracking: true,
     views: 11200,
     scans: 2876,
@@ -65,6 +145,13 @@ export const destinations = [
   }
 ];
 
+<<<<<<< HEAD
+=======
+// =======================
+// ANIMAL SIGHTINGS
+// =======================
+
+>>>>>>> 1b59ad4 (Initial commit)
 export const animalSightings = [
   {
     id: "a1",
@@ -72,7 +159,11 @@ export const animalSightings = [
     location: "Skukuza Rest Camp Area",
     gate: "Paul Kruger Gate",
     time: "45 minutes ago",
+<<<<<<< HEAD
     image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=400",
+=======
+    image: lionImg,
+>>>>>>> 1b59ad4 (Initial commit)
     status: "recent",
     coordinates: { lat: -24.9947, lng: 31.5972 },
     count: 3,
@@ -84,7 +175,11 @@ export const animalSightings = [
     location: "Lower Sabie River",
     gate: "Crocodile Bridge",
     time: "2 hours ago",
+<<<<<<< HEAD
     image: "https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400",
+=======
+    image: elephantImg,
+>>>>>>> 1b59ad4 (Initial commit)
     status: "active",
     coordinates: { lat: -25.1256, lng: 31.9853 },
     count: 12,
@@ -96,7 +191,11 @@ export const animalSightings = [
     location: "Timbavati Area",
     gate: "Orpen Gate",
     time: "3 hours ago",
+<<<<<<< HEAD
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+=======
+    image: leopardImg,
+>>>>>>> 1b59ad4 (Initial commit)
     status: "active",
     coordinates: { lat: -24.5678, lng: 31.4567 },
     count: 1,
@@ -108,7 +207,11 @@ export const animalSightings = [
     location: "Satara Camp Vicinity",
     gate: "Orpen Gate",
     time: "1 hour ago",
+<<<<<<< HEAD
     image: "https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?w=400",
+=======
+    image: buffaloImg,
+>>>>>>> 1b59ad4 (Initial commit)
     status: "recent",
     coordinates: { lat: -24.3923, lng: 31.7754 },
     count: 28,
@@ -120,7 +223,11 @@ export const animalSightings = [
     location: "Pretoriuskop Waterhole",
     gate: "Numbi Gate",
     time: "4 hours ago",
+<<<<<<< HEAD
     image: "https://images.unsplash.com/photo-1514433121568-eeca4a036b10?w=400",
+=======
+    image: rhinoImg,
+>>>>>>> 1b59ad4 (Initial commit)
     status: "historical",
     coordinates: { lat: -25.1667, lng: 31.2667 },
     count: 2,
@@ -128,6 +235,13 @@ export const animalSightings = [
   }
 ];
 
+<<<<<<< HEAD
+=======
+// =======================
+// KRUGER GATES
+// =======================
+
+>>>>>>> 1b59ad4 (Initial commit)
 export const krugerGates = [
   "Paul Kruger Gate",
   "Numbi Gate",
@@ -139,6 +253,13 @@ export const krugerGates = [
   "Punda Maria Gate"
 ];
 
+<<<<<<< HEAD
+=======
+// =======================
+// FLIGHTS
+// =======================
+
+>>>>>>> 1b59ad4 (Initial commit)
 export const flights = [
   {
     id: "f1",
@@ -172,6 +293,7 @@ export const flights = [
   }
 ];
 
+<<<<<<< HEAD
 export const analyticsData = {
   totalInteractions: 45890,
   totalScans: 12450,
@@ -299,6 +421,11 @@ export const users = [
     status: "inactive"
   }
 ];
+=======
+// =======================
+// ACCOMMODATIONS (UNCHANGED – USING LINKS)
+// =======================
+>>>>>>> 1b59ad4 (Initial commit)
 
 export const accommodations = [
   {
@@ -306,11 +433,27 @@ export const accommodations = [
     name: "Singita Lebombo Lodge",
     type: "lodge",
     location: "Kruger National Park",
+<<<<<<< HEAD
     description: "Luxury lodge perched on the cliffs overlooking the N'wanetsi River with stunning views and exclusive safari experiences.",
     imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800",
     rating: 4.9,
     pricePerNight: "R12,500",
     amenities: ["Swimming Pool", "Spa", "Fine Dining", "Game Drives", "WiFi", "Air Conditioning"],
+=======
+    description:
+      "Luxury lodge perched on the cliffs overlooking the N'wanetsi River with stunning views and exclusive safari experiences.",
+    imageUrl: krugerImg,
+    rating: 4.9,
+    pricePerNight: "R12,500",
+    amenities: [
+      "Swimming Pool",
+      "Spa",
+      "Fine Dining",
+      "Game Drives",
+      "WiFi",
+      "Air Conditioning"
+    ],
+>>>>>>> 1b59ad4 (Initial commit)
     contact: {
       phone: "+27 13 735 5500",
       email: "reservations@singita.com",
@@ -322,11 +465,27 @@ export const accommodations = [
     name: "Jock Safari Lodge",
     type: "lodge",
     location: "Kruger National Park",
+<<<<<<< HEAD
     description: "Historic safari lodge offering authentic African experiences with professional guides and luxurious accommodations.",
     imageUrl: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800",
     rating: 4.7,
     pricePerNight: "R8,200",
     amenities: ["Swimming Pool", "Restaurant", "Bar", "Game Drives", "Bush Walks", "Spa"],
+=======
+    description:
+      "Historic safari lodge offering authentic African experiences with professional guides and luxurious accommodations.",
+    imageUrl: sabieSandImg,
+    rating: 4.7,
+    pricePerNight: "R8,200",
+    amenities: [
+      "Swimming Pool",
+      "Restaurant",
+      "Bar",
+      "Game Drives",
+      "Bush Walks",
+      "Spa"
+    ],
+>>>>>>> 1b59ad4 (Initial commit)
     contact: {
       phone: "+27 13 781 9900",
       email: "info@jocksafarilodge.com",
@@ -334,3 +493,138 @@ export const accommodations = [
     }
   }
 ];
+<<<<<<< HEAD
+=======
+
+// =======================
+// CAMPAIGNS
+// =======================
+
+export const campaigns = [
+  {
+    id: "c1",
+    name: "Safari Summer Special",
+    status: "active",
+    startDate: "2025-12-01",
+    endDate: "2026-02-28",
+    target: "5000",
+    reached: "3245",
+    description: "Special summer campaign for Kruger National Park visits"
+  },
+  {
+    id: "c2",
+    name: "Blyde River Adventure",
+    status: "scheduled",
+    startDate: "2026-02-01",
+    endDate: "2026-04-30",
+    target: "3000",
+    reached: "0",
+    description: "Adventure campaign for Blyde River Canyon"
+  }
+];
+
+// =======================
+// USERS
+// =======================
+
+export const users = [
+  {
+    id: "u1",
+    name: "John Smith",
+    email: "john@example.com",
+    role: "Admin",
+    status: "active",
+    joinDate: "2025-01-15"
+  },
+  {
+    id: "u2",
+    name: "Sarah Johnson",
+    email: "sarah@example.com",
+    role: "Manager",
+    status: "active",
+    joinDate: "2025-02-20"
+  },
+  {
+    id: "u3",
+    name: "Mike Brown",
+    email: "mike@example.com",
+    role: "Editor",
+    status: "inactive",
+    joinDate: "2024-12-10"
+  }
+];
+
+// =======================
+// ANALYTICS DATA
+// =======================
+
+export const analyticsData = [
+  {
+    month: "January",
+    views: 4200,
+    interactions: 2400,
+    conversions: 850,
+    engagement: 65
+  },
+  {
+    month: "February",
+    views: 5100,
+    interactions: 3200,
+    conversions: 1050,
+    engagement: 72
+  },
+  {
+    month: "March",
+    views: 4800,
+    interactions: 2800,
+    conversions: 920,
+    engagement: 68
+  },
+  {
+    month: "April",
+    views: 6200,
+    interactions: 4100,
+    conversions: 1200,
+    engagement: 75
+  },
+  {
+    month: "May",
+    views: 7100,
+    interactions: 5200,
+    conversions: 1450,
+    engagement: 82
+  },
+  {
+    month: "June",
+    views: 6800,
+    interactions: 4900,
+    conversions: 1380,
+    engagement: 80
+  }
+];
+
+// =======================
+// DEVICES
+// =======================
+
+export const devices = [
+  {
+    id: "d1",
+    name: "Mobile",
+    percentage: 58,
+    color: "#3b82f6"
+  },
+  {
+    id: "d2",
+    name: "Desktop",
+    percentage: 32,
+    color: "#8b5cf6"
+  },
+  {
+    id: "d3",
+    name: "Tablet",
+    percentage: 10,
+    color: "#ec4899"
+  }
+];
+>>>>>>> 1b59ad4 (Initial commit)
