@@ -6,8 +6,8 @@ import { Plane, Clock, MapPin, AlertTriangle } from 'lucide-react';
 export function FlightPortal({ flightsData = [] }) {
   return (
     <div className="w-full h-full">
-      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-        <Plane className="h-6 w-6" />
+      <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+        <Plane className="h-6 w-6 text-blue-600" />
         Scheduled Flights
       </h2>
 
@@ -17,11 +17,11 @@ export function FlightPortal({ flightsData = [] }) {
           No flights available
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {flightsData.map((flight) => (
-            <Card key={flight.id} className="shadow-sm">
+            <Card key={flight.id} className="shadow-md">
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
+                <CardTitle className="flex items-center justify-between text-base">
                   <span>
                     {flight.airline} {flight.flightNumber}
                   </span>
@@ -39,20 +39,31 @@ export function FlightPortal({ flightsData = [] }) {
                 </CardTitle>
               </CardHeader>
 
-              <CardContent className="space-y-2 text-sm">
-                {flight.destination && (
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-gray-500" />
-                    <span>{flight.destination}</span>
-                  </div>
-                )}
+              <CardContent className="space-y-3 text-sm">
+                <div className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-gray-500" />
+                  <span>
+                    {flight.origin} → {flight.destination}
+                  </span>
+                </div>
 
-                {flight.time && (
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-gray-500" />
-                    <span>{flight.time}</span>
-                  </div>
-                )}
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-gray-500" />
+                  <span>Departure: {flight.departureTime}</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Clock className="h-4 w-4 text-gray-500" />
+                  <span>Arrival: {flight.arrivalTime}</span>
+                </div>
+
+                <div className="text-xs text-muted-foreground">
+                  Duration: {flight.duration}
+                </div>
+
+                <div className="font-semibold text-green-600">
+                  {flight.price}
+                </div>
               </CardContent>
             </Card>
           ))}

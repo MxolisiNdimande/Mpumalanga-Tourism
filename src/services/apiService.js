@@ -145,6 +145,13 @@ export const apiService = {
     const response = await fetch(`${API_BASE}/accommodations`);
     return handleResponse(response);
   },
+
+  // Flights
+  async getFlights() {
+    const response = await fetch(`${API_BASE}/flights`);
+    return handleResponse(response);
+  },
+
   // Analytics / Interactions
   async recordInteraction(interaction) {
     const response = await fetch(`${API_BASE}/analytics/interactions`, {
