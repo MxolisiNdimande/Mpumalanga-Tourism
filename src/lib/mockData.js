@@ -1,19 +1,17 @@
 // =======================
-// IMAGE IMPORTS (LOCAL)
+// IMAGE PATHS (PUBLIC FOLDER)
 // =======================
 
-// Destinations
-import krugerImg from "../assets/images/kruger.jpg";
-import blydeImg from "../assets/images/blyde.jpg";
-import godsWindowImg from "../assets/images/gods-window.jpg";
-import sabieSandImg from "../assets/images/sabie-sand.jpg";
+const krugerImg = "/images/kruger.jpg";
+const blydeImg = "/images/blyde.jpg";
+const godsWindowImg = "/images/gods-window.jpg";
+const sabieSandImg = "/images/sabie-sand.jpg";
 
-// Animal sightings
-import lionImg from "../assets/images/lion.jpg";
-import elephantImg from "../assets/images/elephant.jpg";
-import leopardImg from "../assets/images/leopard.jpg";
-import buffaloImg from "../assets/images/buffalo.jpg";
-import rhinoImg from "../assets/images/rhino.jpg";
+const lionImg = "/images/lion.jpg";
+const elephantImg = "/images/elephant.jpg";
+const leopardImg = "/images/leopard.jpg";
+const buffaloImg = "/images/buffalo.jpg";
+const rhinoImg = "/images/rhino.jpg";
 
 // =======================
 // DESTINATIONS
@@ -25,7 +23,7 @@ export const destinations = [
     name: "Kruger National Park",
     country: "South Africa",
     description:
-      "One of Africa's largest game reserves with high density of wild animals including the Big 5.",
+      "One of Africa's largest game reserves with high density of wild animals including the Big 5. Experience incredible wildlife sightings, guided safaris, and authentic African bush experiences.",
     imageUrl: krugerImg,
     rating: 4.8,
     category: "Wildlife & Nature",
@@ -37,7 +35,7 @@ export const destinations = [
     name: "Blyde River Canyon",
     country: "South Africa",
     description:
-      "One of the largest green canyons in the world with breathtaking scenery.",
+      "A spectacular natural landmark with dramatic scenery, waterfalls, and panoramic views.",
     imageUrl: blydeImg,
     rating: 4.7,
     category: "Nature & Scenery",
@@ -49,7 +47,7 @@ export const destinations = [
     name: "God's Window",
     country: "South Africa",
     description:
-      "A breathtaking viewpoint offering panoramic views of the Lowveld.",
+      "A breathtaking viewpoint offering panoramic vistas of the Lowveld landscape.",
     imageUrl: godsWindowImg,
     rating: 4.6,
     category: "Viewpoints",
@@ -61,10 +59,10 @@ export const destinations = [
     name: "Sabie Sand Game Reserve",
     country: "South Africa",
     description:
-      "Luxury private game reserve with world-class safari experiences.",
+      "Luxury private game reserve sharing unfenced borders with Kruger National Park.",
     imageUrl: sabieSandImg,
     rating: 4.9,
-    category: "Luxury Safari",
+    category: "Wildlife & Luxury",
     activities: ["Private Game Drives", "Luxury Lodging"],
     bookingUrl: "https://www.sabiesands.com"
   }
@@ -102,6 +100,35 @@ export const flights = [
     gate: "B07",
     price: "R2,150",
     bookingUrl: "https://www.flysafair.co.za"
+  }
+];
+
+// =======================
+// ACCOMMODATIONS
+// =======================
+
+export const accommodations = [
+  {
+    id: "acc1",
+    name: "Singita Lebombo Lodge",
+    location: "Kruger National Park",
+    description:
+      "Luxury lodge perched on the cliffs overlooking the N'wanetsi River.",
+    imageUrl: krugerImg,
+    rating: 4.9,
+    pricePerNight: "R12,500",
+    bookingUrl: "https://singita.com"
+  },
+  {
+    id: "acc2",
+    name: "Jock Safari Lodge",
+    location: "Kruger National Park",
+    description:
+      "Historic safari lodge offering authentic African experiences.",
+    imageUrl: sabieSandImg,
+    rating: 4.7,
+    pricePerNight: "R8,200",
+    bookingUrl: "https://jocksafarilodge.com"
   }
 ];
 
@@ -146,114 +173,31 @@ export const animalSightings = [
     status: "historical"
   }
 ];
-// =======================
-// DEVICES (Analytics Dashboard)
-// =======================
-
-export const devices = [
-  {
-    id: "d1",
-    name: "Kiosk Terminal 1",
-    location: "OR Tambo - Arrivals",
-    status: "online",
-    interactions: 3240,
-  },
-  {
-    id: "d2",
-    name: "Digital Signage Gate A3",
-    location: "OR Tambo - Departures",
-    status: "online",
-    interactions: 2890,
-  },
-  {
-    id: "d3",
-    name: "Kiosk Terminal 2",
-    location: "Cape Town Airport",
-    status: "offline",
-    interactions: 1450,
-  },
-  {
-    id: "d4",
-    name: "Signage Gate B7",
-    location: "King Shaka Airport",
-    status: "maintenance",
-    interactions: 980,
-  }
-];
 
 // =======================
-// CAMPAIGNS (CMS)
+// CMS DATA
 // =======================
 
 export const campaigns = [
   {
     id: "c1",
     title: "Explore Mpumalanga Summer Special",
-    description: "Discounted safari packages for summer travelers.",
-    status: "active",
-    startDate: "2026-02-01",
-    endDate: "2026-04-30"
-  },
-  {
-    id: "c2",
-    title: "Blyde Canyon Adventure Week",
-    description: "Guided canyon hikes and river tours.",
-    status: "upcoming",
-    startDate: "2026-05-10",
-    endDate: "2026-05-20"
+    status: "active"
   }
 ];
-// =======================
-// USERS (CMS)
-// =======================
 
 export const users = [
-  {
-    id: "u1",
-    name: "Admin User",
-    email: "admin@kruger.co.za",
-    role: "admin",
-    status: "active"
-  },
-  {
-    id: "u2",
-    name: "Staff Member",
-    email: "staff@kruger.co.za",
-    role: "staff",
-    status: "active"
-  },
-  {
-    id: "u3",
-    name: "Content Editor",
-    email: "editor@kruger.co.za",
-    role: "editor",
-    status: "inactive"
-  }
+  { id: "u1", name: "Admin User", role: "admin" },
+  { id: "u2", name: "Staff Member", role: "staff" }
 ];
-// =======================
-// ANALYTICS (CMS Dashboard)
-// =======================
 
-export const analyticsData = {
-  totalVisitors: 12450,
-  totalBookings: 1830,
-  popularDestinations: [
-    { name: "Blyde River Canyon", visits: 4200 },
-    { name: "Kruger National Park", visits: 5100 },
-    { name: "God's Window", visits: 2100 }
-  ],
-  monthlyTraffic: [
-    { month: "Jan", visitors: 800 },
-    { month: "Feb", visitors: 950 },
-    { month: "Mar", visitors: 1100 },
-    { month: "Apr", visitors: 1300 },
-    { month: "May", visitors: 1500 },
-    { month: "Jun", visitors: 1700 },
-    { month: "Jul", visitors: 1850 },
-    { month: "Aug", visitors: 1950 },
-    { month: "Sep", visitors: 1800 },
-    { month: "Oct", visitors: 1650 },
-    { month: "Nov", visitors: 1400 },
-    { month: "Dec", visitors: 1250 }
-  ]
-};
+export const analyticsData = [
+  { month: "January", views: 4200, conversions: 850 },
+  { month: "February", views: 5100, conversions: 1050 }
+];
+
+export const devices = [
+  { id: "d1", name: "Mobile", percentage: 58 },
+  { id: "d2", name: "Desktop", percentage: 32 },
+  { id: "d3", name: "Tablet", percentage: 10 }
+];

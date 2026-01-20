@@ -20,10 +20,6 @@ export function PublicLanding({ onStaffLogin }) {
     setShowTapPrompt(false);
   };
 
-  const handleViewFlights = () => {
-    setShowFlights(true);
-  };
-
   const handleBackToSignage = () => {
     setShowKiosk(false);
     setTimeout(() => setShowTapPrompt(true), 2000);
@@ -46,7 +42,6 @@ export function PublicLanding({ onStaffLogin }) {
                 setShowKiosk(true);
                 setShowTapPrompt(false);
               }}
-              onOpenFlights={handleViewFlights}
             />
 
             {/* Tap to Explore */}
@@ -71,21 +66,6 @@ export function PublicLanding({ onStaffLogin }) {
               )}
             </AnimatePresence>
 
-            {/* Flights Panel */}
-            <div
-              onClick={handleViewFlights}
-              className="absolute top-16 right-4 z-30 w-72 cursor-pointer bg-white/90 backdrop-blur-md rounded-lg shadow-lg p-4 hover:scale-105 transition-transform"
-            >
-              <h3 className="font-bold text-sm mb-2">Scheduled Flights</h3>
-              <ul className="text-xs max-h-48 overflow-y-auto">
-                {flights.map((flight) => (
-                  <li key={flight.id} className="border-b border-gray-200 py-1">
-                    {flight.airline} {flight.flightNumber} - {flight.status}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {/* Staff Login */}
             <div className="absolute top-4 right-4 z-20">
               <Button
@@ -106,6 +86,10 @@ export function PublicLanding({ onStaffLogin }) {
                 onClose={() => {
                   setShowDestinations(false);
                   setShowTapPrompt(true);
+                }}
+                onViewFlights={() => {
+                  setShowDestinations(false);
+                  setShowFlights(true);
                 }}
               />
             )}

@@ -2,6 +2,8 @@
   "name": "gateway-discoveries",
   "type": "module",
   "version": "1.0.0",
+  "description": "Mpumalanga Tourism / Gateway Discoveries project",
+  "main": "server/index.js",
   "scripts": {
     "test": "vitest run",
     "dev": "vite",
@@ -11,6 +13,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "start": "node server/index.js",
+    "seed": "node server/seed.js",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down"
   },
@@ -25,7 +28,7 @@
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "latest",
     "morgan": "^1.10.1",
-    "pg": "^8.16.3",
+    "pg": "^8.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "recharts": "latest",
@@ -47,5 +50,8 @@
     "tailwindcss": "^3.3.0",
     "vite": "^7.2.7",
     "vitest": "^1.6.1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }
